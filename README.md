@@ -60,7 +60,7 @@ DuAnBigData/
 ├── 📓 ML_Pipeline.ipynb                # ML Models
 ├── 📓 Monitoring_Dashboard.ipynb       # Monitoring Dashboard
 │
-├── 📁 data/                           # Raw data (CSV files)
+├── 📁 data/                           # Raw data (CSV files) + SQLite DB
 ├── 📁 data_clean/                     # Cleaned data sau ETL
 ├── 📁 models/                         # Trained ML models
 ├── 📁 logs/                           # Pipeline logs
@@ -89,7 +89,7 @@ DuAnBigData/
 | **Validate Sessions** | Filter sessions có độ dài hợp lệ |
 | **Remove Outliers** | Loại bỏ giá trị bất thường (price 1%-99%) |
 | **Create Features** | Tạo date, hour, day_of_week, category_level1/2/3 |
-| **Load** | Xuất ra `data_clean/events_clean.csv` |
+| **Load** | SQLite Database + CSV | Lưu vào `data/bigdata.db` + backup CSV |
 
 **Kết quả:**
 - ✅ ~7 triệu rows sau ETL
@@ -144,7 +144,7 @@ DuAnBigData/
 |-------|-----------|
 | **Processing** | Python, Pandas, NumPy |
 | **ML** | Scikit-learn, K-Means, Random Forest |
-| **Storage** | CSV, PostgreSQL (optional) |
+| **Storage** | SQLite, CSV | Local DB, persistent storage |
 | **Notebook** | Jupyter Notebook (.ipynb) |
 | **Visualization** | Matplotlib, Seaborn |
 
@@ -176,8 +176,9 @@ jupyter notebook
 ## 📈 7. Kết quả đạt được
 
 ### Đã hoàn thành:
-- ✅ ETL Pipeline hoàn chỉnh
+- ✅ ETL Pipeline hoàn chỉnh (SQLite + CSV backup)
 - ✅ Data Quality checks (missing, duplicates, outliers)
+- ✅ Persistent Storage với SQLite Database
 - ✅ Customer Segmentation (K-Means)
 - ✅ Churn Prediction (Random Forest)
 - ✅ Product Recommendation
