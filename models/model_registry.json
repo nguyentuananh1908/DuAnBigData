@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "name": "customer_segmentation_kmeans",
+      "type": "clustering",
+      "algorithm": "KMeans",
+      "n_clusters": 5,
+      "metrics": {
+        "silhouette_score": 0.7066853362493732
+      }
+    },
+    {
+      "name": "churn_prediction_rf",
+      "type": "classification",
+      "algorithm": "RandomForestClassifier",
+      "metrics": {
+        "accuracy": 0.7112401028859638,
+        "f1": 0.8129321127231097
+      }
+    }
+  ]
+}
