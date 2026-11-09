@@ -1,14 +1,35 @@
-# Data files (too large for GitHub - >100MB each)
-data/
+# Large raw data and databases (>100MB)
+data/*.csv
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data_clean/*.parquet
 
-# Jupyter notebooks
+# Keep models in git unless very large, but ignore temporary training caches
+*.tmp
+
+# Logs
+logs/*.log
+monitoring/alerts/*
+monitoring/metrics/*
+
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Jupyter Notebooks
 .ipynb_checkpoints/
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
-# OS
+# OS specific
 .DS_Store
 Thumbs.db
+
+# Local validation and backups
+backups/
+.test-runs/
+models/versions/
+monitoring/*.json

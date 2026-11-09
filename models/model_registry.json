@@ -17,6 +17,56 @@
         "accuracy": 0.7112401028859638,
         "f1": 0.8129321127231097
       }
+    },
+    {
+      "model_name": "customer_segmentation_kmeans",
+      "version": "1.0.0",
+      "algorithm": "KMeans",
+      "metrics": {
+        "silhouette_score": 0.6998,
+        "training_samples": 50000
+      },
+      "parameters": {
+        "n_clusters": 5,
+        "features": [
+          "total_events",
+          "total_spent",
+          "avg_spent",
+          "unique_products",
+          "events_per_day"
+        ]
+      },
+      "artifact_path": "D:\\BigData\\DuAnBigData\\models\\customer_segmentation_kmeans.pkl",
+      "trained_at": "2026-10-26T20:13:24.545501"
+    },
+    {
+      "model_name": "churn_prediction_rf",
+      "version": "1.0.0",
+      "algorithm": "RandomForestClassifier",
+      "metrics": {
+        "accuracy": 0.7295,
+        "precision": 0.8165,
+        "recall": 0.84,
+        "f1": 0.828
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": 8,
+        "features": [
+          "total_events",
+          "total_spent",
+          "avg_spent",
+          "unique_products",
+          "total_views",
+          "unique_categories",
+          "days_active",
+          "events_per_day",
+          "purchase_rate"
+        ]
+      },
+      "artifact_path": "D:\\BigData\\DuAnBigData\\models\\churn_prediction_rf.pkl",
+      "trained_at": "2026-10-26T20:13:24.988505"
     }
-  ]
+  ],
+  "updated_at": "2026-10-26T20:13:25.012992"
 }

@@ -1,0 +1,12 @@
+# Direct dependency versions present in the validation environment.
+# This is a tested-version snapshot, not a full transitive dependency lock.
+pandas==3.1.0
+numpy==2.5.3
+pyarrow==26.0.0
+psutil==7.2.2
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+seaborn==0.13.2
+ipykernel==7.4.0
+jupyter==1.1.1
